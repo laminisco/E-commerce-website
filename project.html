@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Millennial Store</title>
+  <link rel="stylesheet" href="project.css">
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar">
+    <div class="logo">EMS</div>
+    <nav class="nav-links">
+      <a href="#intro">Intro</a>
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+    </nav>
+    <div class="cart">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- ====== INTRO SECTION ====== -->
+  <main class="hero" id="intro">
+    <div class="hero-text">
+      <h1>THE E-<br>MILLENNIAL<br>STORE</h1>
+    </div>
+    <div class="hero-image">
+      <img src="heroImage.png" alt="EMS">
+    </div>
+  </main>
+
+  <div class="shop-button-container">
+    <a href="#shop" class="shop-button">SHOP NOW</a>
+  </div>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section class="About-section" id="about">
+    <div class="about-store">
+      <p>
+        E-Millennial Store is a hypothetical online store for gadgets every
+        Millennial or Gen-Z should have today. We’ve got phones, laptops,
+        smartwatches, and more. Explore our gadgets and choose the ones that
+        suit you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====== SHOP SECTION ====== -->
+  <section class="the-shop-section" id="shop">
+    <header><h1>OUR GADGETS</h1></header>
+    <div class="gadgets-grid">
+      <div class="gadget-card" data-price="400">
+        <img src="product1.png" alt="Samsung TV">
+        <h3>SAMSUNG TV</h3>
+        <p class="price-tag">$400</p>
+        <button class="add-to-cart">ADD TO CART</button>
+      </div>
+      <div class="gadget-card" data-price="350">
+        <img src="product2.png" alt="Pixel 4a">
+        <h3>PIXEL 4a</h3>
+        <p class="price-tag">$350</p>
+        <button class="add-to-cart">ADD TO CART</button>
+      </div>
+      <div class="gadget-card" data-price="500">
+        <img src="product3.png" alt="PS5">
+        <h3>PS5</h3>
+        <p class="price-tag">$500</p>
+        <button class="add-to-cart">ADD TO CART</button>
+      </div>
+      <div class="gadget-card" data-price="800">
+        <img src="product4.png" alt="MacBook Air">
+        <h3>MACBOOK AIR</h3>
+        <p class="price-tag">$800</p> 
+        <button class="add-to-cart">ADD TO CART</button>
+      </div>
+      <div class="gadget-card" data-price="250">
+        <img src="product5.png" alt="Apple Watch">
+        <h3>Apple watch</h3>
+        <p class="price-tag">$250</p>
+        <button class="add-to-cart">ADD TO CART</button>
+      </div>
+      <div class="gadget-card" data-price="200">
+        <img src="product6.png" alt="Airpods pro">
+        <h3>Airpods Pro</h3>
+        <p class="price-tag">$200</p>
+        <button class="add-to-cart">ADD TO CART</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CART MODAL ====== -->
+  <div id="cart-modal" class="cart-modal hidden">
+    <div class="cart-content">
+      <h2>Your Cart</h2>
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>S/N</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="cart-total">
+        <p>Total: $<span id="cart-total">0</span></p>
+        <button id="close-cart">Close</button>
+      </div>
+      <div class="cart-total">
+  <p>Total: $<span id="cart-total">0</span></p>
+  <div>
+    <button id="checkout-btn">Checkout</button>
+    <button id="close-cart">Close</button>
+  </div>
+</div>
+
+    </div>
+  </div>
+    <!-- ====== CHECKOUT FORM MODAL ====== -->
+  <div id="checkout-modal" class="checkout-modal hidden">
+    <div class="checkout-content">
+      <h2>Checkout Form</h2>
+      <form id="checkout-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+        <div class="checkout-buttons">
+          <button type="submit">Submit Order</button>
+          <button type="button" id="cancel-checkout">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="project.js"></script>
+</body>
+</html>
